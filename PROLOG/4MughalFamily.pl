@@ -1,0 +1,10 @@
+father(baber,humayun).
+father(humayun,akbar).
+father(akbar,jahangir).
+father(jahangir,shahjahan).
+father(shahjahan,aurangzeb).
+grandfather(X,Z):-father(X,Y),father(Y,Z).
+greatgrandfather(X,Z):-father(X,Y),grandfather(Y,Z).
+son(X,Y):-father(Y,X).
+grandson(X,Y):-grandfather(Y,X).
+greatgrandson(X,Y):-greatgrandfather(Y,X).
